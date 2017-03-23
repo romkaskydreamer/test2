@@ -1,0 +1,36 @@
+{
+  "name": "amx101",
+  "version": "1.0.0",
+  "author": "mudbath",
+  "scripts": {
+    "start": "electron index.js",
+    "gmake": "electron-packager . amx11 --platform=win32 --arch=x64 version=0.1.1",
+    "make": "build"
+  },
+  "build": {
+    "appId": "amx101",
+    "directories": {
+      "buildResources": "./amx101_win",
+      "output": "./El"
+    },
+    "extraResources": {
+      "from": "../Data",
+      "to": ".El/Data",
+      "filter": [
+        "**/*"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^1.4.13",
+    "electron-builder": "^15.4.3",
+    "electron-packager": "^8.6.0",
+    "grunt-electron-installer": "^2.1.0"
+  }
+}
